@@ -1,10 +1,6 @@
 # helium-health-helm-redis-stack.github.io
 custom helm chart for Redis stack deployment for Data team
 
-# helium-health-helm-redis-stack
-custom helm chart for Redis stack deployment for Data team
-
-
 [![Helm Chart](https://img.shields.io/github/v/release/redis-stack/helm-redis-stack.svg)](https://github.com/redis-stack/helm-redis-stack/releases/latest)
 [![redis-stack docker pulls](https://img.shields.io/docker/pulls/redis/redis-stack?label=redis-stack)](https://img.shields.io/docker/pulls/redis/redis-stack)
 [![redis-stack-server docker pulls](https://img.shields.io/docker/pulls/redis/redis-stack-server?label=redis-stack-server)](https://img.shields.io/docker/pulls/redis/redis-stack-server)
@@ -56,5 +52,6 @@ Copy the name of the pod (E.g. redis-stack-77d596476d-6j4d2) and run the followi
 ```bash
 kubectl exec -it <POD_NAME> -- redis-cli
 ```
+
 
 By default redis-stack will have no password, Redis Stack supports the ability to configure multiple named users, each with their own password and access control configuration.  Refer to the [Redis Access Control List documentation](https://redis.io/docs/management/security/acl/) for more information. Alternatively the configuration file can be modified and the *requirepass* directive added. This can also be triggered via the *REDIS_ARGS* environment variable. Examples are available on the [docker image page](https://hub.docker.com/repository/docker/redis/redis-stack-server/)
